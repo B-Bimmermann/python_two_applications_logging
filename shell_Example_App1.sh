@@ -10,6 +10,8 @@ while [ $i -lt 6 ]
 do
 	i=$[$i+1]
 	echo "i is: " + $i
-	echoerr "i is: " + $i + "error"
-	sleep 1
+#	echoerr "i is: " + $i + "error"
+	sleep 2
 done
+
+#sleep 10

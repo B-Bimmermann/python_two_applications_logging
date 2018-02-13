@@ -21,8 +21,12 @@ def stdout_log(logger,proc,log_name):
         # The logger add a newline afther every message.
         # That's why we strip the last \n
         logger.name = log_name
-        if line:
-            logger.info(line.rstrip("\n"))
+        if line and line != ' ':
+            if line == "END END MY END\n":
+                print ("Have close proc ...")
+                proc. terminate()
+            else:
+                logger.info(line.rstrip("\n"))
 ###############################
 
 ###############################
@@ -33,8 +37,12 @@ def stderr_log(logger,proc,log_name):
         # The logger add a newline afther every message.
         # That's why we strip the last \n
         logger.name = log_name
-        if line:
-            logger.error(line.rstrip("\n"))
+        if line and line != ' ':
+            if line == "END END MY END\n":
+                print ("Have close proc ...")
+                proc. terminate()
+            else:    
+                logger.error(line.rstrip("\n"))
 ###############################
 
 
@@ -154,6 +162,7 @@ def log_mani(arglist):
                                           application_2_name,
                                           args.arguments_application_2))
 
+
     #start the first process
     process_one.start()
     # wait and then start the second process
@@ -162,11 +171,16 @@ def log_mani(arglist):
 
 
     # wait for finishing
-    process_one.join()
-    process_two.join()
+    while (process_one.is_alive() and process_two.is_alive()):
+        pass
 
+    # close all processes
+    if (process_one.is_alive()):
+        process_one. terminate()
+    if (process_two.is_alive()):
+        process_two. terminate()
     logger.info('finsed')
-### END OF DEF LOG_MANI() ####
+### END OF DEF LOG_MANI(arglist) ####
 
 
 #############################

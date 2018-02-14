@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Messure and log the time for two aplications
+# Measure and log the time for two applications
 
 
 ###############################
@@ -10,53 +10,60 @@ import subprocess
 import threading
 import multiprocessing
 import time
-import os
+import datetime
+import pathlib
+
+
 ###############################
 
 ###############################
-# Thread funktion for the stdout logging
-def stdout_log(logger,proc,log_name):
+# Thread function for the stdout logging
+def stdout_log(logger, proc, log_name):
     while proc.poll() is None:
         line = proc.stdout.readline().decode("utf-8")
-        # The logger add a newline afther every message.
+        # The logger add a newline after every message.
         # That's why we strip the last \n
         logger.name = log_name
         if line and line != ' ':
             if line == "END END MY END\n":
-                print ("Have close proc ...")
-                proc. terminate()
+                print("Have close proc ...")
+                proc.terminate()
             else:
                 logger.info(line.rstrip("\n"))
+
+
 ###############################
 
 ###############################
-# Thread funktion for the stderr logging
-def stderr_log(logger,proc,log_name):
+# Thread function for the stderr logging
+def stderr_log(logger, proc, log_name):
     while proc.poll() is None:
         line = proc.stderr.readline().decode("utf-8")
-        # The logger add a newline afther every message.
+        # The logger add a newline after every message.
         # That's why we strip the last \n
         logger.name = log_name
         if line and line != ' ':
             if line == "END END MY END\n":
-                print ("Have close proc ...")
-                proc. terminate()
-            else:    
+                print("Have close proc ...")
+                proc.terminate()
+            else:
                 logger.error(line.rstrip("\n"))
+
+
 ###############################
 
 
 ###############################
 # open the subprocess and connect threads for the log to it
-def create_subprocess_with_loggger(logger,processname,processname_short,process_argument):
+def create_subprocess_with_loggger(logger, processname, processname_short, process_argument):
     # open a subprocess and pipe the std output to threads
     if process_argument:
         proc = subprocess.Popen([processname, process_argument], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     else:
         proc = subprocess.Popen([processname], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     # Start the logging threads
-    thread_stdout_log = threading.Thread(target=stdout_log, args=(logger,proc,processname_short))
-    thread_stderr_log = threading.Thread(target=stderr_log, args=(logger,proc,processname_short))
+    thread_stdout_log = threading.Thread(target=stdout_log, args=(logger, proc, processname_short))
+    thread_stderr_log = threading.Thread(target=stderr_log, args=(logger, proc, processname_short))
 
     # Start the logging threads
     thread_stdout_log.start()
@@ -65,12 +72,13 @@ def create_subprocess_with_loggger(logger,processname,processname_short,process_
     # Wait until the thread terminates
     thread_stdout_log.join()
     thread_stderr_log.join()
+
+
 ###############################
 
 ###############################
 # Parse the Options
 def log_mani(arglist):
-
     # Set the argument Parser
     parser = argparse.ArgumentParser(description='Messure and log the time for two aplications')
     parser.add_argument('application_1_path', help='Path to first application')
@@ -84,7 +92,7 @@ def log_mani(arglist):
                         help='Don\'t print the time for each line. (default: true)')
     parser.add_argument('-nT', '--no_sys_time', dest='show_systime', action='store_false',
                         help='Don\'t print the system time for each line. (default: true)')
-    parser.add_argument('-v',"--verbose", dest='verbose', action='store_true',
+    parser.add_argument('-v', "--verbose", dest='verbose', action='store_true',
                         help='Print verbose information (default: false)')
     parser.add_argument('-s', '--shared_folder_path', dest='shared_folder_path',
                         help='Path to the shared folder to clean it up')
@@ -95,8 +103,35 @@ def log_mani(arglist):
     # create logger
     logger = logging.getLogger()
 
+    # check the scripts exists
+    application_1_path = pathlib.Path(args.application_1_path).resolve()
+    application_2_path = pathlib.Path(args.application_2_path).resolve()
+
+    # If the path does not exist we must stop
+    if (not (application_1_path.exists() and application_2_path.exists())):
+        if (not application_1_path.exists()):
+            raise ValueError(
+                'Application path for the first application does not exit. Please check the application path'
+                + 'Path was: ' + args.application_1_path)
+        else:
+            raise ValueError(
+                'Application path for the second application does not exit. Please check the application path.'
+                + 'Path was: ' + args.application_2_path)
+    # else make it to a string
+    else:
+        application_1_path = str(application_1_path)
+        application_2_path = str(application_2_path)
+
+    # set current date to the logfile
+    if (args.logfile_path[:-4] == ".txt"):
+        logfile_path_with_date = args.logfile_path[:-4] + datetime.datetime.now().strftime(
+            "%d-%m-%Y--%H:%M:%S") + ".txt"
+    else:
+        logfile_path_with_date = args.logfile_path + "--" + datetime.datetime.now().strftime(
+            "%d-%m-%Y--%H:%M:%S") + ".txt"
+
     # create file handler which logs even debug messages
-    fh = logging.FileHandler(args.logfile_path)
+    fh = logging.FileHandler(logfile_path_with_date)
 
     # create console handler
     ch = logging.StreamHandler()
@@ -131,16 +166,16 @@ def log_mani(arglist):
         logger.setLevel(logging.INFO)
 
     # Create the names for the applications
-    application_1_name = (os.path.split(args.application_1_path))[1]
-    application_2_name = (os.path.split(args.application_2_path))[1]
+    application_1_name = application_1_path.rsplit('/', 1)[1]
+    application_2_name = application_2_path.rsplit('/', 1)[1]
 
     # Print the path
-    logger.debug("Path to the first application " +  args.application_1_path)
-    logger.debug("Path to the second application " + args.application_2_path)
-    logger.debug("Path to the logfile " + args.logfile_path)
+    logger.debug("Path to the first application " + application_1_path)
+    logger.debug("Path to the second application " + application_2_path)
+    logger.debug("Path to the logfile " + logfile_path_with_date)
 
-    logger.debug("Short name for the first application " +  application_1_name)
-    logger.debug("Short name for second application "    +  application_2_name)
+    logger.debug("Short name for the first application " + application_1_name)
+    logger.debug("Short name for second application " + application_2_name)
 
     if args.shared_folder_path:
         logger.debug("Path to the shared folder  " + args.shared_folder_path)
@@ -151,24 +186,22 @@ def log_mani(arglist):
     # create processes for the subprocess
     process_one = multiprocessing.Process(target=create_subprocess_with_loggger,
                                           args=(
-                                          logger,
-                                          args.application_1_path,
-                                          application_1_name,
-                                          args.arguments_application_1))
+                                              logger,
+                                              application_1_path,
+                                              application_1_name,
+                                              args.arguments_application_1))
     process_two = multiprocessing.Process(target=create_subprocess_with_loggger,
                                           args=(
-                                          logger,
-                                          args.application_2_path,
-                                          application_2_name,
-                                          args.arguments_application_2))
+                                              logger,
+                                              application_2_path,
+                                              application_2_name,
+                                              args.arguments_application_2))
 
-
-    #start the first process
+    # start the first process
     process_one.start()
     # wait and then start the second process
     time.sleep(1.5)
     process_two.start()
-
 
     # wait for finishing
     while (process_one.is_alive() and process_two.is_alive()):
@@ -176,15 +209,19 @@ def log_mani(arglist):
 
     # close all processes
     if (process_one.is_alive()):
-        process_one. terminate()
+        process_one.terminate()
     if (process_two.is_alive()):
-        process_two. terminate()
+        process_two.terminate()
     logger.info('finsed')
-### END OF DEF LOG_MANI(arglist) ####
+
+
+# END OF DEF LOG_MANI(arglist) ####
+#############################
 
 
 #############################
 # main
 if __name__ == "__main__":
     log_mani(sys.argv[1:])
-### END OF DEF __main__ ####
+# END OF DEF __main__ ####
+#############################

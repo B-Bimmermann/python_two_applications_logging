@@ -12,8 +12,6 @@ import multiprocessing
 import time
 import datetime
 import pathlib
-
-
 ###############################
 
 ###############################
@@ -25,7 +23,7 @@ def stdout_log(logger, proc, log_name):
         # That's why we strip the last \n
         logger.name = log_name
         if line and line != ' ':
-            if line == "END END MY END\n":
+            if "END END MY END" in line:
                 print("Have close proc ...")
                 proc.terminate()
             else:
@@ -43,8 +41,7 @@ def stderr_log(logger, proc, log_name):
         # That's why we strip the last \n
         logger.name = log_name
         if line and line != ' ':
-            if line == "END END MY END\n":
-                print("Have close proc ...")
+            if "END END MY END" in line:
                 proc.terminate()
             else:
                 logger.error(line.rstrip("\n"))
@@ -70,17 +67,20 @@ def create_subprocess_with_loggger(logger, processname, processname_short, proce
     thread_stderr_log.start()
 
     # Wait until the thread terminates
-    thread_stdout_log.join()
-    thread_stderr_log.join()
+    while (thread_stdout_log.is_alive() and thread_stderr_log.is_alive()):
+        pass
+
+    # Kill the subprocess
+    proc.terminate()
 
 
 ###############################
 
 ###############################
 # Parse the Options
-def log_mani(arglist):
+def log_apli(arglist):
     # Set the argument Parser
-    parser = argparse.ArgumentParser(description='Messure and log the time for two aplications')
+    parser = argparse.ArgumentParser(description='Messure and log the time for two applications')
     parser.add_argument('application_1_path', help='Path to first application')
     parser.add_argument('application_2_path', help='Path to second application')
     parser.add_argument('logfile_path', help='Path for the logfile')
@@ -94,8 +94,6 @@ def log_mani(arglist):
                         help='Don\'t print the system time for each line. (default: true)')
     parser.add_argument('-v', "--verbose", dest='verbose', action='store_true',
                         help='Print verbose information (default: false)')
-    parser.add_argument('-s', '--shared_folder_path', dest='shared_folder_path',
-                        help='Path to the shared folder to clean it up')
 
     # Parse the arguments from arglist
     args = parser.parse_args(arglist)
@@ -148,12 +146,15 @@ def log_mani(arglist):
     if args.show_systime:
         format_string = 'systime: %(asctime)-15s ||| ' + format_string
 
-    # format the date (with millisekonds)
-    formatter = logging.Formatter(format_string, datefmt="%d-%m-%Y %H:%M:%S.%s")
-    fh.setFormatter(formatter)
+    ## format the date (with millisekonds)
+    #formatter = logging.Formatter(format_string, datefmt="%d-%m-%Y %H:%M:%S.%s")
+
     # format the date (without millisekonds)
-    formatter_console = logging.Formatter(format_string, datefmt="%d-%m-%Y %H:%M:%S")
-    ch.setFormatter(formatter_console)
+    formatter = logging.Formatter(format_string, datefmt="%d-%m-%Y %H:%M:%S")
+
+    # set the formater
+    fh.setFormatter(formatter)
+    ch.setFormatter(formatter)
 
     # add the handlers to the logger
     logger.addHandler(fh)
@@ -176,9 +177,6 @@ def log_mani(arglist):
 
     logger.debug("Short name for the first application " + application_1_name)
     logger.debug("Short name for second application " + application_2_name)
-
-    if args.shared_folder_path:
-        logger.debug("Path to the shared folder  " + args.shared_folder_path)
 
     # Start
     logger.info('Start')
@@ -222,6 +220,6 @@ def log_mani(arglist):
 #############################
 # main
 if __name__ == "__main__":
-    log_mani(sys.argv[1:])
+    log_apli(sys.argv[1:])
 # END OF DEF __main__ ####
 #############################

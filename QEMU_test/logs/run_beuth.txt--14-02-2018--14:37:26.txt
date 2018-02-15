@@ -1,0 +1,514 @@
+systime: 14-02-2018 14:37:26.1518615446 ||| time: 9                    (ms)||| root   ||| DEBUG  ||| Path to the first application /home/bimmermann/Masterarbeit/GITHUB-AREX/python_two_applications_logging/QEMU_test/arm_start_zcu102_shared.sh 
+systime: 14-02-2018 14:37:26.1518615446 ||| time: 9                    (ms)||| root   ||| DEBUG  ||| Path to the second application /home/bimmermann/Masterarbeit/GITHUB-AREX/python_two_applications_logging/QEMU_test/mcu_start_zcu102_shared.sh 
+systime: 14-02-2018 14:37:26.1518615446 ||| time: 9                    (ms)||| root   ||| DEBUG  ||| Path to the logfile /home/bimmermann/Masterarbeit/GITHUB-AREX/python_two_applications_logging/QEMU_test/logs/run_beuth.txt--14-02-2018--14:37:26.txt 
+systime: 14-02-2018 14:37:26.1518615446 ||| time: 9                    (ms)||| root   ||| DEBUG  ||| Short name for the first application arm_start_zcu102_shared.sh 
+systime: 14-02-2018 14:37:26.1518615446 ||| time: 9                    (ms)||| root   ||| DEBUG  ||| Short name for second application mcu_start_zcu102_shared.sh 
+systime: 14-02-2018 14:37:26.1518615446 ||| time: 9                    (ms)||| root   ||| INFO   ||| Start 
+systime: 14-02-2018 14:37:26.1518615446 ||| time: 16                   (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [INFO] Telnet    : telnet  26694 
+systime: 14-02-2018 14:37:26.1518615446 ||| time: 32                   (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [INFO] GDB       : gdb    20357 
+systime: 14-02-2018 14:37:26.1518615446 ||| time: 42                   (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [INFO] QEMU command line: /home/bimmermann/Masterarbeit/qemu-xilinx/aarch64-softmmu/qemu-system-aarch64   -name QEMU_XILINX_XCU102_ARM -nographic -no-reboot -localtime -monitor telnet::26694,server,nowait -serial mon:stdio -serial /dev/null -display none -gdb tcp::20357 -M arm-generic-fdt -global xlnx,zynqmp-boot.cpu-num=0 -global xlnx,zynqmp-boot.use-pmufw=true -device loader,file=/media/bimmermann/petalinux-platte/xilinx-zcu102-2017.3/images/linux/bl31.elf,cpu-num=0 -device loader,file=/media/bimmermann/petalinux-platte/xilinx-zcu102-2017.3/images/linux/Image,addr=0x00080000 -device loader,file=/media/bimmermann/petalinux-platte/xilinx-zcu102-2017.3/images/linux/system.dtb,addr=0x1407f000 -device loader,file=/media/bimmermann/petalinux-platte/xilinx-zcu102-2017.3/build/misc/linux-boot/linux-boot.elf  -pflash /media/bimmermann/petalinux-platte/xilinx-zcu102-2017.3/images/linux/xilinx_qemu.qcow2 -m 4G -hw-dtb /media/bimmermann/petalinux-platte/xilinx-zcu102-2017.3/images/linux/zynqmp-qemu-multiarch-arm.dtb  -machine-path /home/bimmermann/Masterarbeit/qemu_shared_folder   
+systime: 14-02-2018 14:37:26.1518615446 ||| time: 53                   (ms)||| arm_start_zcu102_shared.sh ||| INFO   |||  
+systime: 14-02-2018 14:37:26.1518615446 ||| time: 58                   (ms)||| arm_start_zcu102_shared.sh ||| ERROR  ||| qemu-system-aarch64: Failed to connect socket: No such file or directory 
+systime: 14-02-2018 14:37:26.1518615446 ||| time: 58                   (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| ------------------------------------------------------------------------------------- 
+systime: 14-02-2018 14:37:26.1518615446 ||| time: 58                   (ms)||| arm_start_zcu102_shared.sh ||| ERROR  ||| QEMU waiting for connection on: disconnected:unix:/home/bimmermann/Masterarbeit/qemu_shared_folder/qemu-rport-_pmu@0,server 
+systime: 14-02-2018 14:37:26.1518615446 ||| time: 63                   (ms)||| arm_start_zcu102_shared.sh ||| INFO   |||  
+systime: 14-02-2018 14:37:26.1518615446 ||| time: 69                   (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [INFO] Remove OLD machine shared files 
+systime: 14-02-2018 14:37:26.1518615446 ||| time: 69                   (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [INFO] Start qemu 
+systime: 14-02-2018 14:37:27.1518615447 ||| time: 1520                 (ms)||| mcu_start_zcu102_shared.sh ||| INFO   ||| [INFO] Telnet    : telnet  61612 
+systime: 14-02-2018 14:37:27.1518615447 ||| time: 1536                 (ms)||| mcu_start_zcu102_shared.sh ||| INFO   ||| [INFO] GDB       : gdb    26523 
+systime: 14-02-2018 14:37:27.1518615447 ||| time: 1546                 (ms)||| mcu_start_zcu102_shared.sh ||| INFO   ||| [INFO] Start qemu 
+systime: 14-02-2018 14:37:27.1518615447 ||| time: 1562                 (ms)||| mcu_start_zcu102_shared.sh ||| INFO   ||| [INFO] VM Name          : QEMU_XILINX_XCU102_MICROBLAZE 
+systime: 14-02-2018 14:37:27.1518615447 ||| time: 1562                 (ms)||| mcu_start_zcu102_shared.sh ||| INFO   ||| [INFO] QEMU command line: /home/bimmermann/Masterarbeit/qemu-xilinx/microblazeel-softmmu/qemu-system-microblazeel   -name QEMU_XILINX_XCU102_MICROBLAZE -nographic -display none -monitor telnet::61612,server,nowait -gdb tcp::26523  -M microblaze-fdt -device loader,addr=0xfd1a0074,data=0x1011003,data-len=4 -device loader,addr=0xfd1a007C,data=0x1010f03,data-len=4 -kernel /media/bimmermann/petalinux-platte/xilinx-zcu102-2017.3/pre-built/linux/images/pmu_rom_qemu_sha3.elf -device loader,file=/media/bimmermann/petalinux-platte/xilinx-zcu102-2017.3/images/linux/pmufw.elf  -machine-path /home/bimmermann/Masterarbeit/qemu_shared_folder -hw-dtb /media/bimmermann/petalinux-platte/xilinx-zcu102-2017.3/images/linux/zynqmp-qemu-multiarch-pmu.dtb    
+systime: 14-02-2018 14:37:27.1518615447 ||| time: 1562                 (ms)||| mcu_start_zcu102_shared.sh ||| INFO   |||  
+systime: 14-02-2018 14:37:27.1518615447 ||| time: 1562                 (ms)||| mcu_start_zcu102_shared.sh ||| INFO   ||| ------------------------------------------------------------------------------------- 
+systime: 14-02-2018 14:37:27.1518615447 ||| time: 1562                 (ms)||| mcu_start_zcu102_shared.sh ||| INFO   |||  
+systime: 14-02-2018 14:37:32.1518615452 ||| time: 6336                 (ms)||| arm_start_zcu102_shared.sh ||| ERROR  ||| audio: Could not init `oss' audio driver 
+systime: 14-02-2018 14:37:32.1518615452 ||| time: 6687                 (ms)||| arm_start_zcu102_shared.sh ||| ERROR  ||| /amba_rpu@0/rpu_intc_redirect0@0 Failed: cant get node from phandle 
+systime: 14-02-2018 14:37:32.1518615452 ||| time: 6697                 (ms)||| arm_start_zcu102_shared.sh ||| ERROR  |||  
+systime: 14-02-2018 14:37:32.1518615452 ||| time: 6712                 (ms)||| arm_start_zcu102_shared.sh ||| ERROR  ||| /amba_rpu@0/rpu_intc_redirect1@1 Failed: cant get node from phandle 
+systime: 14-02-2018 14:37:32.1518615452 ||| time: 6722                 (ms)||| arm_start_zcu102_shared.sh ||| ERROR  |||  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12176                (ms)||| arm_start_zcu102_shared.sh ||| ERROR  ||| *********************************** 
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12192                (ms)||| arm_start_zcu102_shared.sh ||| ERROR  ||| Pos.:   0 Name:                                 used_length: 0x80000000    page_size: 0x1000  max_length: 0x80000000    offset: 0x800c1000    fd: -1  flags:  0  RAM: 2  max_length: 0x80000000  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12195                (ms)||| mcu_start_zcu102_shared.sh ||| ERROR  ||| *********************************** 
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12197                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| PMU Firmware 2017.3	Nov  3 2017   11:33:38 
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12202                (ms)||| arm_start_zcu102_shared.sh ||| ERROR  ||| Pos.:   0 Name: ddr_bank3@0x800000000           used_length: 0x80000000    page_size: 0x1000  max_length: 0x80000000    offset: 0x1000c1000   fd: 35  flags: 10  RAM: 2  max_length: 0x80000000  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12211                (ms)||| mcu_start_zcu102_shared.sh ||| ERROR  ||| Pos.:   0 Name: /ddr_bank2@0x40000000           used_length: 0x40000000    page_size: 0x1000  max_length: 0x40000000    offset: 0x40069000    fd: 23  flags: 10  RAM: 2  max_length: 0x40000000  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12223                (ms)||| arm_start_zcu102_shared.sh ||| ERROR  ||| Pos.:   0 Name: /ddr_bank2@0x40000000           used_length: 0x40000000    page_size: 0x1000  max_length: 0x40000000    offset: 0x40061000    fd: 26  flags: 10  RAM: 2  max_length: 0x40000000  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12226                (ms)||| mcu_start_zcu102_shared.sh ||| ERROR  ||| Pos.:   0 Name: /ddr_bank1_3@0x40000            used_length: 0x3ffc0000    page_size: 0x1000  max_length: 0x3ffc0000    offset: 0xa9000       fd: 22  flags: 10  RAM: 2  max_length: 0x3ffc0000  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12233                (ms)||| arm_start_zcu102_shared.sh ||| ERROR  ||| Pos.:   0 Name: /ddr_bank1_3@0x40000            used_length: 0x3ffc0000    page_size: 0x1000  max_length: 0x3ffc0000    offset: 0xa1000       fd: 25  flags: 10  RAM: 2  max_length: 0x3ffc0000  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12236                (ms)||| mcu_start_zcu102_shared.sh ||| ERROR  ||| Pos.:   0 Name: /ddr_bank1_1@0x0                used_length: 0x30000       page_size: 0x1000  max_length: 0x30000       offset: 0x69000       fd: 20  flags: 10  RAM: 2  max_length: 0x30000  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12242                (ms)||| mcu_start_zcu102_shared.sh ||| ERROR  ||| Pos.:   0 Name: /pmu_ram@ffdc0000               used_length: 0x20000       page_size: 0x1000  max_length: 0x20000       offset: 0x0           fd: 14  flags: 10  RAM: 2  max_length: 0x20000  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12243                (ms)||| arm_start_zcu102_shared.sh ||| ERROR  ||| Pos.:   0 Name: /ddr_bank1_1@0x0                used_length: 0x30000       page_size: 0x1000  max_length: 0x30000       offset: 0x61000       fd: 23  flags: 10  RAM: 2  max_length: 0x30000  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12248                (ms)||| arm_start_zcu102_shared.sh ||| ERROR  ||| Pos.:   0 Name: /pmu_ram@ffdc0000               used_length: 0x20000       page_size: 0x1000  max_length: 0x20000       offset: 0x0           fd: 17  flags: 10  RAM: 2  max_length: 0x20000  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12252                (ms)||| mcu_start_zcu102_shared.sh ||| ERROR  ||| Pos.:   0 Name: /ocm_ram_bank_0@0x00000         used_length: 0x10000       page_size: 0x1000  max_length: 0x10000       offset: 0x21000       fd: 16  flags: 10  RAM: 2  max_length: 0x10000  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12259                (ms)||| arm_start_zcu102_shared.sh ||| ERROR  ||| Pos.:   0 Name: /ocm_ram_bank_0@0x00000         used_length: 0x10000       page_size: 0x1000  max_length: 0x10000       offset: 0x21000       fd: 19  flags: 10  RAM: 2  max_length: 0x10000  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12262                (ms)||| mcu_start_zcu102_shared.sh ||| ERROR  ||| Pos.:   0 Name: /ocm_ram_bank_1@0x10000         used_length: 0x10000       page_size: 0x1000  max_length: 0x10000       offset: 0x31000       fd: 17  flags: 10  RAM: 2  max_length: 0x10000  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12274                (ms)||| arm_start_zcu102_shared.sh ||| ERROR  ||| Pos.:   0 Name: /ocm_ram_bank_1@0x10000         used_length: 0x10000       page_size: 0x1000  max_length: 0x10000       offset: 0x31000       fd: 20  flags: 10  RAM: 2  max_length: 0x10000  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12278                (ms)||| mcu_start_zcu102_shared.sh ||| ERROR  ||| Pos.:   0 Name: /ocm_ram_bank_2@0x20000         used_length: 0x10000       page_size: 0x1000  max_length: 0x10000       offset: 0x41000       fd: 18  flags: 10  RAM: 2  max_length: 0x10000  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12284                (ms)||| arm_start_zcu102_shared.sh ||| ERROR  ||| Pos.:   0 Name: /ocm_ram_bank_2@0x20000         used_length: 0x10000       page_size: 0x1000  max_length: 0x10000       offset: 0x41000       fd: 21  flags: 10  RAM: 2  max_length: 0x10000  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12288                (ms)||| mcu_start_zcu102_shared.sh ||| ERROR  ||| Pos.:   0 Name: /ocm_ram_bank_3@0x30000         used_length: 0x10000       page_size: 0x1000  max_length: 0x10000       offset: 0x51000       fd: 19  flags: 10  RAM: 2  max_length: 0x10000  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12288                (ms)||| mcu_start_zcu102_shared.sh ||| ERROR  ||| Pos.:   0 Name: /ddr_bank1_2@0x30000            used_length: 0x10000       page_size: 0x1000  max_length: 0x10000       offset: 0x99000       fd: 21  flags: 10  RAM: 2  max_length: 0x10000  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12288                (ms)||| mcu_start_zcu102_shared.sh ||| ERROR  ||| Pos.:   0 Name: /tcm_ram_r5_0_A@0x00000         used_length: 0x10000       page_size: 0x1000  max_length: 0x10000       offset: 0x80069000    fd: 24  flags: 10  RAM: 2  max_length: 0x10000  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12288                (ms)||| mcu_start_zcu102_shared.sh ||| ERROR  ||| Pos.:   0 Name: /tcm_ram_r5_0_B@0x20000         used_length: 0x10000       page_size: 0x1000  max_length: 0x10000       offset: 0x80079000    fd: 25  flags: 10  RAM: 2  max_length: 0x10000  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12288                (ms)||| mcu_start_zcu102_shared.sh ||| ERROR  ||| Pos.:   0 Name: /tcm_ram_r5_1_A@0x00000         used_length: 0x10000       page_size: 0x1000  max_length: 0x10000       offset: 0x80089000    fd: 26  flags: 10  RAM: 2  max_length: 0x10000  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12288                (ms)||| mcu_start_zcu102_shared.sh ||| ERROR  ||| Pos.:   0 Name: /tcm_ram_r5_1_B@0x20000         used_length: 0x10000       page_size: 0x1000  max_length: 0x10000       offset: 0x80099000    fd: 27  flags: 10  RAM: 2  max_length: 0x10000  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12288                (ms)||| mcu_start_zcu102_shared.sh ||| ERROR  ||| Pos.:   0 Name: /lmb_pmu@0/memory@ffd00000      used_length: 0x8000        page_size: 0x1000  max_length: 0x8000        offset: 0x61000       fd: -1  flags:  0  RAM: 1  max_length: 0x8000  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12289                (ms)||| mcu_start_zcu102_shared.sh ||| ERROR  ||| Pos.:   0 Name: /icache_rpu0@0x40000            used_length: 0x8000        page_size: 0x1000  max_length: 0x8000        offset: 0x800a9000    fd: 28  flags: 10  RAM: 2  max_length: 0x8000  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12289                (ms)||| mcu_start_zcu102_shared.sh ||| ERROR  ||| Pos.:   0 Name: /dcache_rpu0@0x50000            used_length: 0x8000        page_size: 0x1000  max_length: 0x8000        offset: 0x800b1000    fd: 29  flags: 10  RAM: 2  max_length: 0x8000  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12289                (ms)||| mcu_start_zcu102_shared.sh ||| ERROR  ||| Pos.:   0 Name: /icache_rpu1@0x30000            used_length: 0x8000        page_size: 0x1000  max_length: 0x8000        offset: 0x800b9000    fd: 30  flags: 10  RAM: 2  max_length: 0x8000  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12289                (ms)||| mcu_start_zcu102_shared.sh ||| ERROR  ||| Pos.:   0 Name: /dcache_rpu1@0x40000            used_length: 0x8000        page_size: 0x1000  max_length: 0x8000        offset: 0x800c1000    fd: 31  flags: 10  RAM: 2  max_length: 0x8000  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12289                (ms)||| mcu_start_zcu102_shared.sh ||| ERROR  ||| Pos.:   0 Name: /ipibuf@ff990000                used_length: 0x1000        page_size: 0x1000  max_length: 0x1000        offset: 0x20000       fd: 15  flags: 10  RAM: 2  max_length: 0x1000  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12289                (ms)||| mcu_start_zcu102_shared.sh ||| ERROR  ||| *********************************** 
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12300                (ms)||| arm_start_zcu102_shared.sh ||| ERROR  ||| Pos.:   0 Name: /ocm_ram_bank_3@0x30000         used_length: 0x10000       page_size: 0x1000  max_length: 0x10000       offset: 0x51000       fd: 22  flags: 10  RAM: 2  max_length: 0x10000  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12315                (ms)||| arm_start_zcu102_shared.sh ||| ERROR  ||| Pos.:   0 Name: /ddr_bank1_2@0x30000            used_length: 0x10000       page_size: 0x1000  max_length: 0x10000       offset: 0x91000       fd: 24  flags: 10  RAM: 2  max_length: 0x10000  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12330                (ms)||| arm_start_zcu102_shared.sh ||| ERROR  ||| Pos.:   0 Name: /tcm_ram_r5_0_A@0x00000         used_length: 0x10000       page_size: 0x1000  max_length: 0x10000       offset: 0x80061000    fd: 27  flags: 10  RAM: 2  max_length: 0x10000  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12346                (ms)||| arm_start_zcu102_shared.sh ||| ERROR  ||| Pos.:   0 Name: /tcm_ram_r5_0_B@0x20000         used_length: 0x10000       page_size: 0x1000  max_length: 0x10000       offset: 0x80071000    fd: 28  flags: 10  RAM: 2  max_length: 0x10000  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12356                (ms)||| arm_start_zcu102_shared.sh ||| ERROR  ||| Pos.:   0 Name: /tcm_ram_r5_1_A@0x00000         used_length: 0x10000       page_size: 0x1000  max_length: 0x10000       offset: 0x80081000    fd: 29  flags: 10  RAM: 2  max_length: 0x10000  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12366                (ms)||| arm_start_zcu102_shared.sh ||| ERROR  ||| Pos.:   0 Name: /tcm_ram_r5_1_B@0x20000         used_length: 0x10000       page_size: 0x1000  max_length: 0x10000       offset: 0x80091000    fd: 30  flags: 10  RAM: 2  max_length: 0x10000  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12377                (ms)||| arm_start_zcu102_shared.sh ||| ERROR  ||| Pos.:   0 Name: /icache_rpu0@0x40000            used_length: 0x8000        page_size: 0x1000  max_length: 0x8000        offset: 0x800a1000    fd: 31  flags: 10  RAM: 2  max_length: 0x8000  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12387                (ms)||| arm_start_zcu102_shared.sh ||| ERROR  ||| Pos.:   0 Name: /dcache_rpu0@0x50000            used_length: 0x8000        page_size: 0x1000  max_length: 0x8000        offset: 0x800a9000    fd: 32  flags: 10  RAM: 2  max_length: 0x8000  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12407                (ms)||| arm_start_zcu102_shared.sh ||| ERROR  ||| Pos.:   0 Name: /icache_rpu1@0x30000            used_length: 0x8000        page_size: 0x1000  max_length: 0x8000        offset: 0x800b1000    fd: 33  flags: 10  RAM: 2  max_length: 0x8000  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12417                (ms)||| arm_start_zcu102_shared.sh ||| ERROR  ||| Pos.:   0 Name: /dcache_rpu1@0x40000            used_length: 0x8000        page_size: 0x1000  max_length: 0x8000        offset: 0x800b9000    fd: 34  flags: 10  RAM: 2  max_length: 0x8000  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12432                (ms)||| arm_start_zcu102_shared.sh ||| ERROR  ||| Pos.:   0 Name: /ipibuf@ff990000                used_length: 0x1000        page_size: 0x1000  max_length: 0x1000        offset: 0x20000       fd: 18  flags: 10  RAM: 2  max_length: 0x1000  
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12448                (ms)||| arm_start_zcu102_shared.sh ||| ERROR  ||| *********************************** 
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12583                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| NOTICE:  ATF running on XCZUUNKN/QEMU v1/RTL0.0 at 0xfffea000, with PMU firmware 
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12604                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| NOTICE:  BL31: Secure code at 0x60000000 
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12619                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| NOTICE:  BL31: Non secure code at 0x8000000 
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12624                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| NOTICE:  BL31: v1.3(release):f9b244b 
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12624                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| NOTICE:  BL31: Built : 08:57:11, Dec 18 2017 
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12648                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] Booting Linux on physical CPU 0x0 
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12669                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] Linux version 4.9.0-xilinx-v2017.3 (bimmermann@AREX-ThinkCentre-M900) (gcc version 6.2.1 20161016 (Linaro GCC 6.2-2016.11) ) #15 SMP Wed Feb 14 14:17:16 CET 2018 
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12684                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] Boot CPU: AArch64 Processor [410fd034] 
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12705                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] earlycon: cdns0 at MMIO 0x00000000ff000000 (options '115200n8') 
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12725                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] bootconsole [cdns0] enabled 
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12746                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] efi: Getting EFI parameters from FDT: 
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12771                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] efi: UEFI not found. 
+systime: 14-02-2018 14:37:38.1518615458 ||| time: 12787                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] cma: Reserved 256 MiB at 0x0000000070000000 
+systime: 14-02-2018 14:37:41.1518615461 ||| time: 15622                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] psci: probing for conduit method from DT. 
+systime: 14-02-2018 14:37:41.1518615461 ||| time: 15638                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] psci: PSCIv1.0 detected in firmware. 
+systime: 14-02-2018 14:37:41.1518615461 ||| time: 15659                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] psci: Using standard PSCI v0.2 function IDs 
+systime: 14-02-2018 14:37:41.1518615461 ||| time: 15679                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] psci: MIGRATE_INFO_TYPE not supported. 
+systime: 14-02-2018 14:37:41.1518615461 ||| time: 15705                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] percpu: Embedded 470 pages/cpu @ffffffc87bca8000 s1887064 r8192 d29864 u1925120 
+systime: 14-02-2018 14:37:41.1518615461 ||| time: 15726                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] Detected VIPT I-cache on CPU0 
+systime: 14-02-2018 14:37:41.1518615461 ||| time: 15760                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] CPU features: enabling workaround for ARM erratum 845719 
+systime: 14-02-2018 14:37:41.1518615461 ||| time: 15780                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 1034240 
+systime: 14-02-2018 14:37:41.1518615461 ||| time: 15796                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] Kernel command line: earlycon clk_ignore_unused lpj=34920500 nowatchdog rcupdate.rcu_cpu_stall_suppress=1 
+systime: 14-02-2018 14:37:41.1518615461 ||| time: 15811                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes) 
+systime: 14-02-2018 14:37:41.1518615461 ||| time: 15826                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes) 
+systime: 14-02-2018 14:37:41.1518615461 ||| time: 15845                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes) 
+systime: 14-02-2018 14:37:42.1518615462 ||| time: 15865                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] software IO TLB [mem 0x6bfff000-0x6ffff000] (64MB) mapped at [ffffffc06bfff000-ffffffc06fffefff] 
+systime: 14-02-2018 14:37:42.1518615462 ||| time: 15950                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] Memory: 3701808K/4194304K available (9724K kernel code, 730K rwdata, 3604K rodata, 64960K init, 13930K bss, 230352K reserved, 262144K cma-reserved) 
+systime: 14-02-2018 14:37:42.1518615462 ||| time: 15966                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] Virtual kernel memory layout: 
+systime: 14-02-2018 14:37:42.1518615462 ||| time: 15981                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000]     modules : 0xffffff8000000000 - 0xffffff8008000000   (   128 MB) 
+systime: 14-02-2018 14:37:42.1518615462 ||| time: 15996                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000]     vmalloc : 0xffffff8008000000 - 0xffffffbebfff0000   (   250 GB) 
+systime: 14-02-2018 14:37:42.1518615462 ||| time: 16017                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000]       .text : 0xffffff8008080000 - 0xffffff8008a00000   (  9728 KB) 
+systime: 14-02-2018 14:37:42.1518615462 ||| time: 16033                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000]     .rodata : 0xffffff8008a00000 - 0xffffff8008d90000   (  3648 KB) 
+systime: 14-02-2018 14:37:42.1518615462 ||| time: 16049                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000]       .init : 0xffffff8008d90000 - 0xffffff800cd00000   ( 64960 KB) 
+systime: 14-02-2018 14:37:42.1518615462 ||| time: 16064                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000]       .data : 0xffffff800cd00000 - 0xffffff800cdb6a00   (   731 KB) 
+systime: 14-02-2018 14:37:42.1518615462 ||| time: 16080                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000]        .bss : 0xffffff800cdb6a00 - 0xffffff800db514c8   ( 13931 KB) 
+systime: 14-02-2018 14:37:42.1518615462 ||| time: 16096                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000]     fixed   : 0xffffffbefe7fd000 - 0xffffffbefec00000   (  4108 KB) 
+systime: 14-02-2018 14:37:42.1518615462 ||| time: 16101                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000]     PCI I/O : 0xffffffbefee00000 - 0xffffffbeffe00000   (    16 MB) 
+systime: 14-02-2018 14:37:42.1518615462 ||| time: 16101                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000]     vmemmap : 0xffffffbf00000000 - 0xffffffc000000000   (     4 GB maximum) 
+systime: 14-02-2018 14:37:42.1518615462 ||| time: 16101                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000]               0xffffffbf00000000 - 0xffffffbf1dc00000   (   476 MB actual) 
+systime: 14-02-2018 14:37:42.1518615462 ||| time: 16101                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000]     memory  : 0xffffffc000000000 - 0xffffffc880000000   ( 34816 MB) 
+systime: 14-02-2018 14:37:42.1518615462 ||| time: 16101                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] Running RCU self tests 
+systime: 14-02-2018 14:37:42.1518615462 ||| time: 16106                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] Hierarchical RCU implementation. 
+systime: 14-02-2018 14:37:42.1518615462 ||| time: 16107                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] 	RCU debugfs-based tracing is enabled. 
+systime: 14-02-2018 14:37:42.1518615462 ||| time: 16107                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] 	RCU lockdep checking is enabled. 
+systime: 14-02-2018 14:37:42.1518615462 ||| time: 16107                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] 	Build-time adjustment of leaf fanout to 64. 
+systime: 14-02-2018 14:37:42.1518615462 ||| time: 16107                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] 	RCU restricting CPUs from NR_CPUS=8 to nr_cpu_ids=4. 
+systime: 14-02-2018 14:37:42.1518615462 ||| time: 16107                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=64, nr_cpu_ids=4 
+systime: 14-02-2018 14:37:42.1518615462 ||| time: 16107                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] NR_IRQS:64 nr_irqs:64 0 
+systime: 14-02-2018 14:37:42.1518615462 ||| time: 16107                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] GIC: Adjusting CPU interface base to 0x00000000f902f000 
+systime: 14-02-2018 14:37:42.1518615462 ||| time: 16107                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] GIC: Using split EOI/Deactivate mode 
+systime: 14-02-2018 14:37:42.1518615462 ||| time: 16107                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] arm_arch_timer: Architected cp15 timer(s) running at 50.00MHz (phys). 
+systime: 14-02-2018 14:37:42.1518615462 ||| time: 16107                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0xb8812736b, max_idle_ns: 440795202655 ns 
+systime: 14-02-2018 14:37:42.1518615462 ||| time: 16107                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000198] sched_clock: 56 bits at 50MHz, resolution 20ns, wraps every 4398046511100ns 
+systime: 14-02-2018 14:37:42.1518615462 ||| time: 16107                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.021478] Console: colour dummy device 80x25 
+systime: 14-02-2018 14:37:42.1518615462 ||| time: 16108                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.021936] console [tty0] enabled 
+systime: 14-02-2018 14:37:42.1518615462 ||| time: 16108                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.022823] bootconsole [cdns0] disabled 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44254                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] Booting Linux on physical CPU 0x0 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44269                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] Linux version 4.9.0-xilinx-v2017.3 (bimmermann@AREX-ThinkCentre-M900) (gcc version 6.2.1 20161016 (Linaro GCC 6.2-2016.11) ) #15 SMP Wed Feb 14 14:17:16 CET 2018 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44290                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] Boot CPU: AArch64 Processor [410fd034] 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44305                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] earlycon: cdns0 at MMIO 0x00000000ff000000 (options '115200n8') 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44305                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] bootconsole [cdns0] enabled 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44306                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] efi: Getting EFI parameters from FDT: 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44306                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] efi: UEFI not found. 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44306                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] cma: Reserved 256 MiB at 0x0000000070000000 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44306                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] psci: probing for conduit method from DT. 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44306                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] psci: PSCIv1.0 detected in firmware. 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44306                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] psci: Using standard PSCI v0.2 function IDs 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44306                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] psci: MIGRATE_INFO_TYPE not supported. 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44306                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] percpu: Embedded 470 pages/cpu @ffffffc87bca8000 s1887064 r8192 d29864 u1925120 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44307                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] Detected VIPT I-cache on CPU0 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44307                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] CPU features: enabling workaround for ARM erratum 845719 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44307                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 1034240 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44307                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] Kernel command line: earlycon clk_ignore_unused lpj=34920500 nowatchdog rcupdate.rcu_cpu_stall_suppress=1 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44307                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes) 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44307                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes) 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44307                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes) 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44308                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] software IO TLB [mem 0x6bfff000-0x6ffff000] (64MB) mapped at [ffffffc06bfff000-ffffffc06fffefff] 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44308                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] Memory: 3701808K/4194304K available (9724K kernel code, 730K rwdata, 3604K rodata, 64960K init, 13930K bss, 230352K reserved, 262144K cma-reserved) 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44308                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] Virtual kernel memory layout: 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44308                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000]     modules : 0xffffff8000000000 - 0xffffff8008000000   (   128 MB) 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44308                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000]     vmalloc : 0xffffff8008000000 - 0xffffffbebfff0000   (   250 GB) 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44308                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000]       .text : 0xffffff8008080000 - 0xffffff8008a00000   (  9728 KB) 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44308                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000]     .rodata : 0xffffff8008a00000 - 0xffffff8008d90000   (  3648 KB) 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44309                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000]       .init : 0xffffff8008d90000 - 0xffffff800cd00000   ( 64960 KB) 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44309                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000]       .data : 0xffffff800cd00000 - 0xffffff800cdb6a00   (   731 KB) 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44309                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000]        .bss : 0xffffff800cdb6a00 - 0xffffff800db514c8   ( 13931 KB) 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44309                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000]     fixed   : 0xffffffbefe7fd000 - 0xffffffbefec00000   (  4108 KB) 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44309                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000]     PCI I/O : 0xffffffbefee00000 - 0xffffffbeffe00000   (    16 MB) 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44309                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000]     vmemmap : 0xffffffbf00000000 - 0xffffffc000000000   (     4 GB maximum) 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44309                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000]               0xffffffbf00000000 - 0xffffffbf1dc00000   (   476 MB actual) 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44310                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000]     memory  : 0xffffffc000000000 - 0xffffffc880000000   ( 34816 MB) 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44310                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] Running RCU self tests 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44310                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] Hierarchical RCU implementation. 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44310                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] 	RCU debugfs-based tracing is enabled. 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44310                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] 	RCU lockdep checking is enabled. 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44310                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] 	Build-time adjustment of leaf fanout to 64. 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44311                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] 	RCU restricting CPUs from NR_CPUS=8 to nr_cpu_ids=4. 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44311                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=64, nr_cpu_ids=4 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44311                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] NR_IRQS:64 nr_irqs:64 0 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44311                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] GIC: Adjusting CPU interface base to 0x00000000f902f000 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44311                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] GIC: Using split EOI/Deactivate mode 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44311                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] arm_arch_timer: Architected cp15 timer(s) running at 50.00MHz (phys). 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44311                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0xb8812736b, max_idle_ns: 440795202655 ns 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44312                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.000198] sched_clock: 56 bits at 50MHz, resolution 20ns, wraps every 4398046511100ns 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44312                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.021478] Console: colour dummy device 80x25 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44312                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.021936] console [tty0] enabled 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44312                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.022823] bootconsole [cdns0] disabled 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44312                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.023895] Lock dependency validator: Copyright (c) 2006 Red Hat, Inc., Ingo Molnar 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44312                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.024131] ... MAX_LOCKDEP_SUBCLASSES:  8 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44312                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.024246] ... MAX_LOCK_DEPTH:          48 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44312                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.024362] ... MAX_LOCKDEP_KEYS:        8191 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44312                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.024483] ... CLASSHASH_SIZE:          4096 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44313                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.024606] ... MAX_LOCKDEP_ENTRIES:     32768 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44313                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.024728] ... MAX_LOCKDEP_CHAINS:      65536 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44313                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.024848] ... CHAINHASH_SIZE:          32768 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44313                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.024969]  memory used by lock dependency info: 8671 kB 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44313                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.025102]  per task-struct memory footprint: 2688 bytes 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44313                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.025768] Calibrating delay loop (skipped) preset value.. 17460.25 BogoMIPS (lpj=34920500) 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44313                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.026421] pid_max: default: 32768 minimum: 301 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44313                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.032475] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes) 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44313                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.032684] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes) 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44313                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.105646] ASID allocator initialised with 65536 entries 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44313                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.136385] zynqmp_plat_init Power management API v0.3 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44314                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.140019] EFI services will not be available. 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44314                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.165532] Detected VIPT I-cache on CPU1 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44314                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.170000] CPU1: Booted secondary processor [410fd034] 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44314                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.193602] Detected VIPT I-cache on CPU2 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44314                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.194213] CPU2: Booted secondary processor [410fd034] 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44314                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.217905] Detected VIPT I-cache on CPU3 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44314                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.218967] CPU3: Booted secondary processor [410fd034] 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44314                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.225566] Brought up 4 CPUs 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44314                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.226951] SMP: Total of 4 processors activated. 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44314                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.227487] CPU features: detected feature: 32-bit EL0 Support 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44314                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.227978] CPU: All CPU(s) started at EL2 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44315                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.230003] alternatives: patching kernel code 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44315                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.270991] devtmpfs: initialized 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44315                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.661043] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44315                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.754379] xor: measuring software checksum speed 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44315                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.799515]    8regs     :  1260.000 MB/sec 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44315                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.853326]    8regs_prefetch:  2396.000 MB/sec 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44315                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    0.902847]    32regs    :  1594.000 MB/sec 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44315                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    1.096276]    32regs_prefetch:   778.000 MB/sec 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44315                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    1.096542] xor: using function: 8regs_prefetch (2396.000 MB/sec) 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44315                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    1.104157] pinctrl core: initialized pinctrl subsystem 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44316                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    1.177846] NET: Registered protocol family 16 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44316                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    1.267566] cpuidle: using governor menu 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44316                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    1.274025] Failed to initialise IOMMU /amba/smmu@fd800000 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44316                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    1.276384] vdso: 2 pages (1 code @ ffffff8008a07000, 1 data @ ffffff800cd04000) 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44316                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    1.279867] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers. 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44316                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    1.318538] DMA: preallocated 256 KiB pool for atomic allocations 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44316                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    2.010662] reset_zynqmp reset-controller: Xilinx zynqmp reset driver probed 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44316                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    3.335898] ARM CCI_400_r1 PMU driver probed 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44316                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    3.586025] zynqmp-pinctrl ff180000.pinctrl: zynqmp pinctrl initialized 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44317                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    4.596837] HugeTLB registered 2 MB page size, pre-allocated 0 pages 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44317                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    4.734257] raid6: int64x1  gen()   709 MB/s 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44317                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    4.804714] raid6: int64x1  xor()   465 MB/s 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44317                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    4.874908] raid6: int64x2  gen()   984 MB/s 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44317                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    4.945750] raid6: int64x2  xor()   493 MB/s 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44317                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    5.018100] raid6: int64x4  gen()   708 MB/s 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44317                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    5.088854] raid6: int64x4  xor()   213 MB/s 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44317                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    5.159453] raid6: int64x8  gen()   368 MB/s 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44317                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    5.231729] raid6: int64x8  xor()   145 MB/s 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44317                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    5.303849] raid6: neonx1   gen()   198 MB/s 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44318                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    5.375456] raid6: neonx1   xor()   106 MB/s 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44318                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    5.447632] raid6: neonx2   gen()   217 MB/s 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44318                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    5.519229] raid6: neonx2   xor()   112 MB/s 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44318                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    5.591704] raid6: neonx4   gen()   221 MB/s 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44318                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    5.665901] raid6: neonx4   xor()   115 MB/s 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44318                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    5.737843] raid6: neonx8   gen()   159 MB/s 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44318                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    5.809551] raid6: neonx8   xor()   114 MB/s 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44318                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    5.809764] raid6: using algorithm int64x2 gen() 984 MB/s 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44318                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    5.809944] raid6: .... xor() 493 MB/s, rmw enabled 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44318                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    5.810174] raid6: using intx1 recovery algorithm 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44319                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    5.915612] SCSI subsystem initialized 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44319                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    5.949428] usbcore: registered new interface driver usbfs 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44319                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    5.951741] usbcore: registered new interface driver hub 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44319                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    5.954900] usbcore: registered new device driver usb 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44319                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    5.958583] media: Linux media interface: v0.10 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44319                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    5.959653] Linux video capture interface: v2.00 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44319                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    5.960497] pps_core: LinuxPPS API ver. 1 registered 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44319                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    5.960670] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it> 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44319                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    5.968596] PTP clock support registered 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44319                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    5.984382] FPGA manager framework 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44319                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    6.008184] fpga-region fpga-full: FPGA Region probed 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44319                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    6.020622] Advanced Linux Sound Architecture Driver Initialized. 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44320                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    6.068218] Bluetooth: Core ver 2.22 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44320                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    6.070732] NET: Registered protocol family 31 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44320                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    6.070927] Bluetooth: HCI device and connection manager initialized 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44320                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    6.080494] Bluetooth: HCI socket layer initialized 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44320                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    6.080930] Bluetooth: L2CAP socket layer initialized 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44320                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    6.082362] Bluetooth: SCO socket layer initialized 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44320                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    6.186230] DMA-API: preallocated 4096 debug entries 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44320                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    6.186654] DMA-API: debugging enabled by kernel config 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44320                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    6.190657] clocksource: Switched to clocksource arch_sys_counter 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44320                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    6.200877] VFS: Disk quotas dquot_6.6.0 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44320                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    6.203834] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes) 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44320                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    7.972598] NET: Registered protocol family 2 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44320                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    7.999713] TCP established hash table entries: 32768 (order: 6, 262144 bytes) 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44320                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    8.004267] TCP bind hash table entries: 32768 (order: 9, 2621440 bytes) 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44320                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    8.111972] TCP: Hash tables configured (established 32768 bind 32768) 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44320                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    8.114916] UDP hash table entries: 2048 (order: 6, 393216 bytes) 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44320                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    8.128237] UDP-Lite hash table entries: 2048 (order: 6, 393216 bytes) 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44321                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    8.150214] NET: Registered protocol family 1 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44321                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    8.172404] RPC: Registered named UNIX socket transport module. 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44321                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    8.172680] RPC: Registered udp transport module. 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44321                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    8.172860] RPC: Registered tcp transport module. 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44321                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [    8.173023] RPC: Registered tcp NFSv4.1 backchannel transport module. 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44321                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   25.571530] hw perfevents: enabled with armv8_pmuv3 PMU driver, 1 counters available 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44321                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   25.608830] futex hash table entries: 1024 (order: 5, 131072 bytes) 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44321                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   25.616639] audit: initializing netlink subsys (disabled) 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44321                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   25.630094] audit: type=2000 audit(22.928:1): initialized 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44321                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   25.671546] workingset: timestamp_bits=62 max_order=20 bucket_order=0 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44321                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   25.722602] NFS: Registering the id_resolver key type 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44321                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   25.726369] Key type id_resolver registered 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44321                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   25.726600] Key type id_legacy registered 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44321                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   25.727071] nfs4filelayout_init: NFSv4 File Layout Driver Registering... 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44321                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   25.728827] jffs2: version 2.2. (NAND) (SUMMARY)  © 2001-2006 Red Hat, Inc. 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44321                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   26.150671] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 248) 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44321                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   26.151779] io scheduler noop registered 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44322                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   26.152018] io scheduler deadline registered 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44322                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   26.152396] io scheduler cfq registered (default) 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44322                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   26.234655] nwl-pcie fd0e0000.pcie: Link is UP 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44322                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   26.236910] OF: PCI: host bridge /amba/pcie@fd0e0000 ranges: 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44322                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   26.239170] OF: PCI:   MEM 0xe0000000..0xefffffff -> 0xe0000000 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44322                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   26.239598] OF: PCI:   MEM 0x600000000..0x7ffffffff -> 0x600000000 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44322                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   26.264947] nwl-pcie fd0e0000.pcie: PCI host bridge to bus 0000:00 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44322                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   26.266623] pci_bus 0000:00: root bus resource [bus 00-ff] 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44322                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   26.266959] pci_bus 0000:00: root bus resource [mem 0xe0000000-0xefffffff] 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44322                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   26.267180] pci_bus 0000:00: root bus resource [mem 0x600000000-0x7ffffffff pref] 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44322                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   26.348478] xilinx-dpdma fd4c0000.dma: Xilinx DPDMA engine is probed 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44322                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   26.378762] Write failed gate address:1001202 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44322                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   26.384290] xilinx-zynqmp-dma fd500000.dma: ZynqMP DMA driver Probe success 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44322                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   26.395502] xilinx-zynqmp-dma fd510000.dma: ZynqMP DMA driver Probe success 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44322                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   26.402284] xilinx-zynqmp-dma fd520000.dma: ZynqMP DMA driver Probe success 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44322                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   26.408122] xilinx-zynqmp-dma fd530000.dma: ZynqMP DMA driver Probe success 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44322                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   26.422270] xilinx-zynqmp-dma fd540000.dma: ZynqMP DMA driver Probe success 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44323                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   26.428246] xilinx-zynqmp-dma fd550000.dma: ZynqMP DMA driver Probe success 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44323                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   26.435009] xilinx-zynqmp-dma fd560000.dma: ZynqMP DMA driver Probe success 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44323                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   26.440925] xilinx-zynqmp-dma fd570000.dma: ZynqMP DMA driver Probe success 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44323                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   26.452725] xilinx-zynqmp-dma ffa80000.dma: ZynqMP DMA driver Probe success 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44323                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   26.459486] xilinx-zynqmp-dma ffa90000.dma: ZynqMP DMA driver Probe success 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44323                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   26.466078] xilinx-zynqmp-dma ffaa0000.dma: ZynqMP DMA driver Probe success 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44323                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   26.472067] xilinx-zynqmp-dma ffab0000.dma: ZynqMP DMA driver Probe success 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44323                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   26.478907] xilinx-zynqmp-dma ffac0000.dma: ZynqMP DMA driver Probe success 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44323                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   26.484820] xilinx-zynqmp-dma ffad0000.dma: ZynqMP DMA driver Probe success 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44338                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   26.491712] xilinx-zynqmp-dma ffae0000.dma: ZynqMP DMA driver Probe success 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44354                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   26.498285] xilinx-zynqmp-dma ffaf0000.dma: ZynqMP DMA driver Probe success 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44369                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   26.508456] zynqmp_pm firmware: Power management API v0.3 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44385                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   26.525737] xenfs: not registering filesystem on non-xen platform 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44405                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   35.253129] Serial: 8250/16550 driver, 4 ports, IRQ sharing disabled 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44420                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   35.330993] ff000000.serial: ttyPS0 at MMIO 0xff000000 (irq = 46, base_baud = 10415625) is a xuartps 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44436                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   35.357045] console [ttyPS0] enabled 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44451                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   35.386253] ff010000.serial: ttyPS1 at MMIO 0xff010000 (irq = 47, base_baud = 2479910) is a xuartps 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44467                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   35.394387] [drm] Initialized 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44487                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   35.432881] [drm] load() is defered & will be called again 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44508                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   35.472150] xilinx-drm-dp-sub fd4aa000.dp_sub: Xilinx DisplayPort Subsystem is probed 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44597                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   35.754957] brd: module loaded 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44776                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   35.979337] loop: module loaded 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44811                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   36.028173] ahci-ceva fd0c0000.ahci: couldn't get PHY in node ahci: -517 
+systime: 14-02-2018 14:38:10.1518615490 ||| time: 44831                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   36.046464] mtdoops: mtd device (mtddev=name/number) must be supplied 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 44899                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   36.139143] m25p80 spi0.0: n25q512a (131072 Kbytes) 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 44920                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   36.140278] 4 ofpart partitions found on MTD device spi0.0 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 44935                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   36.140501] Creating 4 MTD partitions on "spi0.0": 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 44950                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   36.140955] 0x000000000000-0x000001e00000 : "boot" 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 44971                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   36.174147] 0x000001e00000-0x000001e40000 : "bootenv" 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 44991                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   36.199779] 0x000001e40000-0x000004240000 : "kernel" 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45007                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   36.225665] 0x000004240000-0x000008000000 : "spare" 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45032                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   36.270986] libphy: Fixed MDIO Bus: probed 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45048                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   36.300608] tun: Universal TUN/TAP device driver, 1.6 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45063                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   36.300815] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com> 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45128                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   36.424492] CAN device driver interface 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45244                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   36.563499] macb ff0e0000.ethernet: Not enabling partial store and forward 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45264                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   36.574154] libphy: MACB_mii_bus: probed 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45361                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   36.710437] macb ff0e0000.ethernet eth0: Cadence GEM rev 0x40070106 at 0xff0e0000 irq 31 (00:0a:35:00:22:01) 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45372                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   36.710853] Marvell 88E1118 ff0e0000.etherne:0c: attached PHY driver [Marvell 88E1118] (mii_bus:phy_addr=ff0e0000.etherne:0c, irq=-1) 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45372                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   36.719351] usbcore: registered new interface driver asix 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45372                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   36.720060] usbcore: registered new interface driver ax88179_178a 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45372                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   36.720746] usbcore: registered new interface driver cdc_ether 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45372                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   36.721968] usbcore: registered new interface driver net1080 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45372                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   36.722647] usbcore: registered new interface driver cdc_subset 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45372                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   36.723419] usbcore: registered new interface driver zaurus 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45373                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   36.724339] usbcore: registered new interface driver cdc_ncm 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45454                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   36.826705] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45475                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   36.827039] ehci-pci: EHCI PCI platform driver 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45480                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   36.831758] usbcore: registered new interface driver uas 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45480                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   36.832794] usbcore: registered new interface driver usb-storage 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45480                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   36.861976] mousedev: PS/2 mouse device common for all mice 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45480                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   36.867018] i2c /dev entries driver 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45563                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   36.961818] usbcore: registered new interface driver uvcvideo 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45578                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   36.962263] USB Video Class driver (1.1.1) 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45604                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   36.998443] cdns-wdt fd4d0000.watchdog: Xilinx Watchdog Timer at ffffff800dcdf000 with timeout 10s 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45653                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   37.074749] Bluetooth: HCI UART driver ver 2.3 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45668                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   37.075052] Bluetooth: HCI UART protocol H4 registered 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45678                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   37.075249] Bluetooth: HCI UART protocol BCSP registered 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45679                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   37.075437] Bluetooth: HCI UART protocol LL registered 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45679                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   37.075609] Bluetooth: HCI UART protocol ATH3K registered 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45679                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   37.075784] Bluetooth: HCI UART protocol Three-wire (H5) registered 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45679                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   37.076959] Bluetooth: HCI UART protocol Intel registered 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45679                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   37.078631] Bluetooth: HCI UART protocol Broadcom registered 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45679                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   37.078850] Bluetooth: HCI UART protocol QCA registered 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45679                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   37.079796] usbcore: registered new interface driver bcm203x 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45679                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   37.080727] usbcore: registered new interface driver bpa10x 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45680                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   37.083362] usbcore: registered new interface driver bfusb 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45680                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   37.084263] usbcore: registered new interface driver btusb 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45680                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   37.084463] Bluetooth: Generic Bluetooth SDIO driver ver 0.1 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45680                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   37.086976] usbcore: registered new interface driver ath3k 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45680                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   37.106030] cpufreq: cpufreq_online: CPU0: Running at unlisted freq: 277750 KHz 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45707                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   37.142919] cpufreq: cpufreq_online: CPU0: Unlisted initial frequency changed to: 299999 KHz 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45718                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   37.164299] sdhci: Secure Digital Host Controller Interface driver 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45738                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   37.164594] sdhci: Copyright(c) Pierre Ossman 
+systime: 14-02-2018 14:38:11.1518615491 ||| time: 45754                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   37.164749] sdhci-pltfm: SDHCI platform and OF driver helper 
+systime: 14-02-2018 14:38:12.1518615492 ||| time: 45880                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   37.358417] mmc0: SDHCI controller on ff170000.sdhci [ff170000.sdhci] using ADMA 64-bit 
+systime: 14-02-2018 14:38:12.1518615492 ||| time: 46031                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   37.547023] ledtrig-cpu: registered to indicate activity on CPUs 
+systime: 14-02-2018 14:38:12.1518615492 ||| time: 46046                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   37.552526] usbcore: registered new interface driver usbhid 
+systime: 14-02-2018 14:38:12.1518615492 ||| time: 46061                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   37.552737] usbhid: USB HID core driver 
+systime: 14-02-2018 14:38:12.1518615492 ||| time: 46082                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   37.608973] fpga_manager fpga0: Xilinx ZynqMP FPGA Manager registered 
+systime: 14-02-2018 14:38:12.1518615492 ||| time: 46102                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   37.637725] xilinx-dp-snd-pcm dp_snd_pcm0: Xilinx DisplayPort Sound PCM probed 
+systime: 14-02-2018 14:38:12.1518615492 ||| time: 46118                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   37.638838] xilinx-dp-snd-pcm dp_snd_pcm1: Xilinx DisplayPort Sound PCM probed 
+systime: 14-02-2018 14:38:12.1518615492 ||| time: 46149                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   37.701735] Write failed to divider address:ff5e00b0 
+systime: 14-02-2018 14:38:13.1518615493 ||| time: 47234                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.050659] xilinx-dp-snd-codec dp_snd_codec0: Failed to get required clock freq 
+systime: 14-02-2018 14:38:13.1518615493 ||| time: 47254                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.053131] xilinx-dp-snd-codec: probe of dp_snd_codec0 failed with error -22 
+systime: 14-02-2018 14:38:13.1518615493 ||| time: 47280                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.064010] xilinx-dp-snd-card dp_snd_card: ASoC: CPU DAI (null) not registered 
+systime: 14-02-2018 14:38:13.1518615493 ||| time: 47300                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.070923] pktgen: Packet Generator for packet performance testing. Version: 2.75 
+systime: 14-02-2018 14:38:13.1518615493 ||| time: 47315                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.107818] Netfilter messages via NETLINK v0.30. 
+systime: 14-02-2018 14:38:13.1518615493 ||| time: 47331                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.112632] ip_tables: (C) 2000-2006 Netfilter Core Team 
+systime: 14-02-2018 14:38:13.1518615493 ||| time: 47351                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.116851] Initializing XFRM netlink socket 
+systime: 14-02-2018 14:38:13.1518615493 ||| time: 47367                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.120784] NET: Registered protocol family 10 
+systime: 14-02-2018 14:38:13.1518615493 ||| time: 47382                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.140908] ip6_tables: (C) 2000-2006 Netfilter Core Team 
+systime: 14-02-2018 14:38:13.1518615493 ||| time: 47397                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.143239] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver 
+systime: 14-02-2018 14:38:13.1518615493 ||| time: 47418                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.171434] NET: Registered protocol family 17 
+systime: 14-02-2018 14:38:13.1518615493 ||| time: 47433                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.172531] NET: Registered protocol family 15 
+systime: 14-02-2018 14:38:13.1518615493 ||| time: 47454                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.179437] bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this. 
+systime: 14-02-2018 14:38:13.1518615493 ||| time: 47474                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.180241] Ebtables v2.0 registered 
+systime: 14-02-2018 14:38:13.1518615493 ||| time: 47489                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.184552] can: controller area network core (rev 20120528 abi 9) 
+systime: 14-02-2018 14:38:13.1518615493 ||| time: 47505                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.186933] NET: Registered protocol family 29 
+systime: 14-02-2018 14:38:13.1518615493 ||| time: 47520                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.187718] can: raw protocol (rev 20120528) 
+systime: 14-02-2018 14:38:13.1518615493 ||| time: 47536                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.188719] can: broadcast manager protocol (rev 20161123 t) 
+systime: 14-02-2018 14:38:13.1518615493 ||| time: 47556                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.192826] can: netlink gateway (rev 20130117) max_hops=1 
+systime: 14-02-2018 14:38:13.1518615493 ||| time: 47581                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.208215] Bluetooth: RFCOMM TTY layer initialized 
+systime: 14-02-2018 14:38:13.1518615493 ||| time: 47602                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.208789] Bluetooth: RFCOMM socket layer initialized 
+systime: 14-02-2018 14:38:13.1518615493 ||| time: 47612                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.210236] Bluetooth: RFCOMM ver 1.11 
+systime: 14-02-2018 14:38:13.1518615493 ||| time: 47612                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.210776] Bluetooth: BNEP (Ethernet Emulation) ver 1.3 
+systime: 14-02-2018 14:38:13.1518615493 ||| time: 47612                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.211103] Bluetooth: BNEP filters: protocol multicast 
+systime: 14-02-2018 14:38:13.1518615493 ||| time: 47612                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.211594] Bluetooth: BNEP socket layer initialized 
+systime: 14-02-2018 14:38:13.1518615493 ||| time: 47613                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.211925] Bluetooth: HIDP (Human Interface Emulation) ver 1.2 
+systime: 14-02-2018 14:38:13.1518615493 ||| time: 47613                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.212418] Bluetooth: HIDP socket layer initialized 
+systime: 14-02-2018 14:38:13.1518615493 ||| time: 47613                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.222170] 9pnet: Installing 9P2000 support 
+systime: 14-02-2018 14:38:13.1518615493 ||| time: 47613                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.223572] Key type dns_resolver registered 
+systime: 14-02-2018 14:38:13.1518615493 ||| time: 47613                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.270023] registered taskstats version 1 
+systime: 14-02-2018 14:38:13.1518615493 ||| time: 47613                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.284816] Btrfs loaded, crc32c=crc32c-generic 
+systime: 14-02-2018 14:38:13.1518615493 ||| time: 47801                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.760098] [drm] load() is defered & will be called again 
+systime: 14-02-2018 14:38:13.1518615493 ||| time: 47829                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.795079] xilinx-psgtr fd400000.zynqmp_phy: Lane:1 type:8 protocol:4 pll_locked:yes 
+systime: 14-02-2018 14:38:13.1518615493 ||| time: 47855                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.830604] xilinx-drm-dp fd4a0000.dp: device found, version 4.010 
+systime: 14-02-2018 14:38:14.1518615494 ||| time: 47870                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.831040] xilinx-drm-dp fd4a0000.dp: Display Port, version 1.0200 (tx) 
+systime: 14-02-2018 14:38:14.1518615494 ||| time: 47883                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.848632] xilinx-psgtr fd400000.zynqmp_phy: Lane:3 type:3 protocol:2 pll_locked:yes 
+systime: 14-02-2018 14:38:14.1518615494 ||| time: 47883                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.855797] ahci-ceva fd0c0000.ahci: AHCI 0001.0000 32 slots 2 ports 1.5 Gbps 0x3 impl platform mode 
+systime: 14-02-2018 14:38:14.1518615494 ||| time: 47883                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.856442] ahci-ceva fd0c0000.ahci: flags: 64bit ncq only  
+systime: 14-02-2018 14:38:14.1518615494 ||| time: 47955                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.951947] scsi host0: ahci-ceva 
+systime: 14-02-2018 14:38:14.1518615494 ||| time: 47980                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.983199] scsi host1: ahci-ceva 
+systime: 14-02-2018 14:38:14.1518615494 ||| time: 48001                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.992633] ata1: SATA max UDMA/133 mmio [mem 0xfd0c0000-0xfd0c1fff] port 0x100 irq 44 
+systime: 14-02-2018 14:38:14.1518615494 ||| time: 48021                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   39.996949] ata2: SATA max UDMA/133 mmio [mem 0xfd0c0000-0xfd0c1fff] port 0x180 irq 44 
+systime: 14-02-2018 14:38:14.1518615494 ||| time: 48137                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   40.179669] dwc3 fe200000.dwc3: Configuration mismatch. dr_mode forced to gadget 
+systime: 14-02-2018 14:38:14.1518615494 ||| time: 48149                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   40.180359] dwc3 fe200000.dwc3: this is not a DesignWare USB3 DRD Core 
+systime: 14-02-2018 14:38:14.1518615494 ||| time: 48149                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   40.180749] dwc3 fe200000.dwc3: failed to initialize core 
+systime: 14-02-2018 14:38:14.1518615494 ||| time: 48182                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   40.236227] cdns-i2c ff020000.i2c: 400 kHz mmio ff020000 irq 33 
+systime: 14-02-2018 14:38:14.1518615494 ||| time: 48202                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   40.254608] 1-0020 supply vcc not found, using dummy regulator 
+systime: 14-02-2018 14:38:14.1518615494 ||| time: 48294                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   40.375480] ata2: SATA link down (SStatus 0 SControl 300) 
+systime: 14-02-2018 14:38:14.1518615494 ||| time: 48314                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   40.380003] ata1: SATA link down (SStatus 0 SControl 300) 
+systime: 14-02-2018 14:38:15.1518615495 ||| time: 49042                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   41.311121] i2c i2c-1: SCL is stuck low, exit recovery 
+systime: 14-02-2018 14:38:15.1518615495 ||| time: 49067                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   41.323741] cdns-i2c ff020000.i2c: timeout waiting on completion 
+systime: 14-02-2018 14:38:15.1518615495 ||| time: 49083                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   41.324444] pca953x 1-0020: failed reading register 
+systime: 14-02-2018 14:38:15.1518615495 ||| time: 49098                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   41.329971] pca953x: probe of 1-0020 failed with error -110 
+systime: 14-02-2018 14:38:15.1518615495 ||| time: 49114                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   41.335144] 1-0021 supply vcc not found, using dummy regulator 
+systime: 14-02-2018 14:38:16.1518615496 ||| time: 49878                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   42.356550] i2c i2c-1: SCL is stuck low, exit recovery 
+systime: 14-02-2018 14:38:16.1518615496 ||| time: 49899                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   42.368172] cdns-i2c ff020000.i2c: timeout waiting on completion 
+systime: 14-02-2018 14:38:16.1518615496 ||| time: 49914                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   42.368578] pca953x 1-0021: failed reading register 
+systime: 14-02-2018 14:38:16.1518615496 ||| time: 49914                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   42.371358] pca953x: probe of 1-0021 failed with error -110 
+systime: 14-02-2018 14:38:16.1518615496 ||| time: 50717                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   43.411786] i2c i2c-1: SCL is stuck low, exit recovery 
+systime: 14-02-2018 14:38:16.1518615496 ||| time: 50743                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   43.427682] cdns-i2c ff020000.i2c: timeout waiting on completion 
+systime: 14-02-2018 14:38:16.1518615496 ||| time: 50758                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   43.428198] pca954x 1-0075: probe failed 
+systime: 14-02-2018 14:38:16.1518615496 ||| time: 50784                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   43.451647] cdns-i2c ff030000.i2c: 400 kHz mmio ff030000 irq 34 
+systime: 14-02-2018 14:38:16.1518615496 ||| time: 50828                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   43.543686] at24 3-0054: 1024 byte 24c08 EEPROM, writable, 1 bytes/write 
+systime: 14-02-2018 14:38:16.1518615496 ||| time: 50848                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   43.544956] i2c i2c-2: Added multiplexed i2c bus 3 
+systime: 14-02-2018 14:38:17.1518615497 ||| time: 50874                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   43.564204] i2c i2c-2: Added multiplexed i2c bus 4 
+systime: 14-02-2018 14:38:17.1518615497 ||| time: 50894                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   43.623506] si570 5-005d: registered, current frequency 300000000 Hz 
+systime: 14-02-2018 14:38:17.1518615497 ||| time: 50905                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   43.624672] i2c i2c-2: Added multiplexed i2c bus 5 
+systime: 14-02-2018 14:38:17.1518615497 ||| time: 50943                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   43.687918] si570 6-005d: registered, current frequency 148500000 Hz 
+systime: 14-02-2018 14:38:17.1518615497 ||| time: 50944                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   43.690422] i2c i2c-2: Added multiplexed i2c bus 6 
+systime: 14-02-2018 14:38:17.1518615497 ||| time: 50958                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   43.706066] i2c i2c-2: Added multiplexed i2c bus 7 
+systime: 14-02-2018 14:38:17.1518615497 ||| time: 50978                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   43.716958] i2c i2c-2: Added multiplexed i2c bus 8 
+systime: 14-02-2018 14:38:17.1518615497 ||| time: 50994                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   43.726046] i2c i2c-2: Added multiplexed i2c bus 9 
+systime: 14-02-2018 14:38:17.1518615497 ||| time: 51009                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   43.730850] i2c i2c-2: Added multiplexed i2c bus 10 
+systime: 14-02-2018 14:38:17.1518615497 ||| time: 51024                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   43.731068] pca954x 2-0074: registered 8 multiplexed busses for I2C switch pca9548 
+systime: 14-02-2018 14:38:17.1518615497 ||| time: 51808                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   44.775276] i2c i2c-2: SCL is stuck low, exit recovery 
+systime: 14-02-2018 14:38:17.1518615497 ||| time: 51826                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   44.791731] cdns-i2c ff030000.i2c: timeout waiting on completion 
+systime: 14-02-2018 14:38:17.1518615497 ||| time: 51842                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   44.792157] pca954x 2-0075: probe failed 
+systime: 14-02-2018 14:38:18.1518615498 ||| time: 51857                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   44.807474] xilinx-dp-snd-card dp_snd_card: ASoC: CPU DAI (null) not registered 
+systime: 14-02-2018 14:38:18.1518615498 ||| time: 51898                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   44.887641] OF: graph: no port node found in /xilinx_drm 
+systime: 14-02-2018 14:38:18.1518615498 ||| time: 51914                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   44.888333] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013). 
+systime: 14-02-2018 14:38:18.1518615498 ||| time: 51929                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   44.888687] [drm] No driver support for vblank timestamp query. 
+systime: 14-02-2018 14:38:18.1518615498 ||| time: 52213                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   45.255055] Console: switching to colour frame buffer device 128x48 
+systime: 14-02-2018 14:38:18.1518615498 ||| time: 52229                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   45.278508] xilinx-drm xilinx_drm: fb0:  frame buffer device 
+systime: 14-02-2018 14:38:18.1518615498 ||| time: 52254                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   45.302825] [drm] Initialized xilinx_drm 1.0.0 20130509 on minor 0 
+systime: 14-02-2018 14:38:18.1518615498 ||| time: 52270                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   45.307675] xilinx-dp-snd-card dp_snd_card: ASoC: CPU DAI (null) not registered 
+systime: 14-02-2018 14:38:18.1518615498 ||| time: 52285                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   45.324887] input: gpio-keys as /devices/platform/gpio-keys/input/input0 
+systime: 14-02-2018 14:38:18.1518615498 ||| time: 52311                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   45.352352] clk: Not disabling unused clocks 
+systime: 14-02-2018 14:38:18.1518615498 ||| time: 52331                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   45.357480] ALSA device list: 
+systime: 14-02-2018 14:38:18.1518615498 ||| time: 52351                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   45.357697]   No soundcards found. 
+systime: 14-02-2018 14:38:18.1518615498 ||| time: 52372                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   45.361002] xilinx-dp-snd-card dp_snd_card: ASoC: CPU DAI (null) not registered 
+systime: 14-02-2018 14:38:18.1518615498 ||| time: 52392                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   45.362493] Warning: unable to open an initial console. 
+systime: 14-02-2018 14:38:18.1518615498 ||| time: 52566                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   45.716721] Freeing unused kernel memory: 64960K (ffffffc000d90000 - ffffffc004d00000) 
+systime: 14-02-2018 14:38:22.1518615502 ||| time: 55875                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   49.852485] udevd[1668]: starting version 3.2 
+systime: 14-02-2018 14:38:22.1518615502 ||| time: 55901                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   49.865356] random: udevd: uninitialized urandom read (16 bytes read) 
+systime: 14-02-2018 14:38:22.1518615502 ||| time: 55921                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   49.869974] random: udevd: uninitialized urandom read (16 bytes read) 
+systime: 14-02-2018 14:38:22.1518615502 ||| time: 55942                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   49.871993] random: udevd: uninitialized urandom read (16 bytes read) 
+systime: 14-02-2018 14:38:22.1518615502 ||| time: 55962                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   49.872734] random: udevd: uninitialized urandom read (16 bytes read) 
+systime: 14-02-2018 14:38:22.1518615502 ||| time: 55983                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   49.967655] udevd[1669]: starting eudev-3.2 
+systime: 14-02-2018 14:38:24.1518615504 ||| time: 58663                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   53.343787] random: udevd: uninitialized urandom read (16 bytes read) 
+systime: 14-02-2018 14:38:26.1518615506 ||| time: 59856                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [   54.828313] random: udevd: uninitialized urandom read (16 bytes read) 
+systime: 14-02-2018 14:39:03.1518615543 ||| time: 97210                (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [  101.520724] random: dd: uninitialized urandom read (512 bytes read) 
+systime: 14-02-2018 14:39:07.1518615547 ||| time: 101588               (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [  106.999857] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready 
+systime: 14-02-2018 14:39:08.1518615548 ||| time: 102406               (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [  108.016480] macb ff0e0000.ethernet eth0: link up (100/Full) 
+systime: 14-02-2018 14:39:08.1518615548 ||| time: 102422               (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [  108.019890] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready 
+systime: 14-02-2018 14:39:16.1518615556 ||| time: 110704               (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [  118.388346] random: dropbearkey: uninitialized urandom read (32 bytes read) 
+systime: 14-02-2018 14:39:16.1518615556 ||| time: 110758               (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [  118.462967] random: dropbearkey: uninitialized urandom read (32 bytes read) 
+systime: 14-02-2018 14:39:19.1518615559 ||| time: 113132               (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [  121.423497] random: dropbearkey: uninitialized urandom read (32 bytes read) 
+systime: 14-02-2018 14:39:19.1518615559 ||| time: 113513               (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| Start the Script on a VM (of the ZCU102) 
+systime: 14-02-2018 14:39:19.1518615559 ||| time: 113736               (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| Number of CPUs: 4 
+systime: 14-02-2018 14:39:19.1518615559 ||| time: 113778               (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [  122.231306] qsim_out[2157]: undefined instruction: pc=0000000000400598 
+systime: 14-02-2018 14:39:19.1518615559 ||| time: 113798               (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [  122.236190] Code: aa1603e0 94001c09 f9443660 94001b55 (d51b9c15)  
+systime: 14-02-2018 14:39:20.1518615560 ||| time: 114687               (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [  123.373750] macb ff0e0000.ethernet eth0: link down 
+systime: 14-02-2018 14:39:22.1518615562 ||| time: 116380               (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| Switch from fast forwarding to simulation 
+systime: 14-02-2018 14:39:22.1518615562 ||| time: 116395               (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| The next echo can take up to 10 minutes 
+systime: 14-02-2018 14:39:22.1518615562 ||| time: 116416               (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [  125.512333] mark_app[2171]: undefined instruction: pc=00000000004006d0 
+systime: 14-02-2018 14:39:22.1518615562 ||| time: 116431               (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [  125.519704] Code: 94001a2c f9472260 94001978 3201f3e0 (d51b9c00)  
+systime: 14-02-2018 14:39:22.1518615562 ||| time: 116452               (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| Quick test bis 60 
+systime: 14-02-2018 14:39:22.1518615562 ||| time: 116472               (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| i is:  + 1 
+systime: 14-02-2018 14:39:23.1518615563 ||| time: 117262               (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| i is:  + 2 
+systime: 14-02-2018 14:39:24.1518615564 ||| time: 118140               (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| START START MY START 
+systime: 14-02-2018 14:39:24.1518615564 ||| time: 118166               (ms)||| arm_start_zcu102_shared.sh ||| INFO   ||| [  127.715785] mark_app[2174]: undefined instruction: pc=000000000040067c 
+systime: 14-02-2018 14:39:24.1518615564 ||| time: 118188               (ms)||| root   ||| INFO   ||| finsed 

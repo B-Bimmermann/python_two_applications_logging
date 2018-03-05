@@ -30,7 +30,7 @@ def plot_qemu_log(arglist):
     logfile_path = pathlib.Path(args.logfile_path).resolve()
 
     # If the path does not exist we must stop
-    if (not logfile_path.exists() ):
+    if not logfile_path.exists():
         raise ValueError(
             'Logfile path does not exit. Please check the path'
             + 'Path was: ' + args.logfile_path)
@@ -38,9 +38,9 @@ def plot_qemu_log(arglist):
     else:
         logfile_path = str(logfile_path)
 
-    N = 500
-    random_x = np.linspace(0, 1, N)
-    random_y = np.random.randn(N)
+    n = 500
+    random_x = np.linspace(0, 1, n)
+    random_y = np.random.randn(n)
 
     # Create a trace
     trace = plotly.graph_objs.Scatter(

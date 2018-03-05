@@ -12,6 +12,8 @@ import multiprocessing
 import time
 import datetime
 import pathlib
+
+
 ###############################
 
 ###############################
@@ -67,7 +69,7 @@ def create_subprocess_with_loggger(logger, processname, processname_short, proce
     thread_stderr_log.start()
 
     # Wait until the thread terminates
-    while (thread_stdout_log.is_alive() and thread_stderr_log.is_alive()):
+    while thread_stdout_log.is_alive() and thread_stderr_log.is_alive():
         pass
 
     # Kill the subprocess
@@ -106,8 +108,8 @@ def log_apli(arglist):
     application_2_path = pathlib.Path(args.application_2_path).resolve()
 
     # If the path does not exist we must stop
-    if (not (application_1_path.exists() and application_2_path.exists())):
-        if (not application_1_path.exists()):
+    if not (application_1_path.exists() and application_2_path.exists()):
+        if not application_1_path.exists():
             raise ValueError(
                 'Application path for the first application does not exit. Please check the application path'
                 + 'Path was: ' + args.application_1_path)
@@ -121,7 +123,7 @@ def log_apli(arglist):
         application_2_path = str(application_2_path)
 
     # set current date to the logfile
-    if (args.logfile_path[:-4] == ".txt"):
+    if args.logfile_path[:-4] == ".txt":
         logfile_path_with_date = args.logfile_path[:-4] + datetime.datetime.now().strftime(
             "%d-%m-%Y--%H:%M:%S") + ".txt"
     else:
@@ -146,8 +148,8 @@ def log_apli(arglist):
     if args.show_systime:
         format_string = 'systime: %(asctime)-15s ||| ' + format_string
 
-    ## format the date (with millisekonds)
-    #formatter = logging.Formatter(format_string, datefmt="%d-%m-%Y %H:%M:%S.%s")
+    # # format the date (with millisekonds)
+    # formatter = logging.Formatter(format_string, datefmt="%d-%m-%Y %H:%M:%S.%s")
 
     # format the date (without millisekonds)
     formatter = logging.Formatter(format_string, datefmt="%d-%m-%Y %H:%M:%S")
@@ -202,13 +204,13 @@ def log_apli(arglist):
     process_two.start()
 
     # wait for finishing
-    while (process_one.is_alive() and process_two.is_alive()):
+    while process_one.is_alive() and process_two.is_alive():
         pass
 
     # close all processes
-    if (process_one.is_alive()):
+    if process_one.is_alive():
         process_one.terminate()
-    if (process_two.is_alive()):
+    if process_two.is_alive():
         process_two.terminate()
     logger.info('finsed')
 

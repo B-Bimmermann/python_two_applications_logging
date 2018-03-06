@@ -22,7 +22,7 @@ def stdout_log(logger, proc):
         # The logger add a newline after every message.
         # That's why we strip the last \n
         if line and line != ' ':
-            if "END END MY END" in line:
+            if "END END MY END" in line or "Call trace:" in line:
                 print("Have close proc ...")
                 proc.terminate()
             else:
@@ -39,7 +39,8 @@ def stderr_log(logger, proc):
         # The logger add a newline after every message.
         # That's why we strip the last \n
         if line and line != ' ':
-            if "END END MY END" in line:
+            # If we should and or have a kernel panic
+            if "END END MY END" in line or "Call trace:" in line:
                 proc.terminate()
             else:
                 logger.error(line.rstrip("\n"))
